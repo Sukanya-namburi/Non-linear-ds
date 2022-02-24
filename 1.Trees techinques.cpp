@@ -10,7 +10,7 @@ struct node{
         left=right=NULL;
     }
 };
-void preorder(struct node *x){ //preorder
+void preorder(struct node *x){ //preorder(root,left,right)
     if(x==NULL){
         return ;
     }
@@ -18,7 +18,7 @@ void preorder(struct node *x){ //preorder
     preorder(x->left);
     preorder(x->right);
 }
-void inorder(struct node *y){ //inorder
+void inorder(struct node *y){ //inorder(left,root,right)
     if(y==NULL){
         return;
     }
@@ -26,7 +26,7 @@ void inorder(struct node *y){ //inorder
     cout<<y->data;
     inorder(y->right);
 }
-void postorder(struct node *z){ //postorder
+void postorder(struct node *z){ //postorder(left,right,root)
     if(z==NULL){
         return;
     }
